@@ -37,7 +37,7 @@ while IFS= read -r match; do
         # Convert camelCase to snake_case
         snake_case=$(echo $matched_word | perl -pe 's/([a-z0-9])([A-Z])/$1_\L$2/g')
         # Replace matched word with snake_case
-        sed -i "" "s/$matched_word/$snake_case/g" "$dir/$new_filename"
+        sed -i "" "s/[[:<:]]$matched_word[[:>:]]/$snake_case/g" "$dir/$new_filename"
     fi
 done <<< "$matches"
 
