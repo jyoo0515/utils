@@ -1,0 +1,5 @@
+*.tsv
+*.log
+*.proto
+*.sql
+*.json
